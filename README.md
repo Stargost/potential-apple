@@ -1,6 +1,8 @@
 # POTENTIAL APPLE
  Megumi "Did you say potential" meme but Bad Apple.
 
+ Demonstration for it [here](https://www.youtube.com/watch?v=kREB9TzxRtA)
+
 ## FAQ
 "What is this made with?"
 > The Godot 4 Game Engine.
@@ -25,3 +27,6 @@
 [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
 [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter)
+
+## Special Thanks
+Thank you to Apollosense for inspiring me to make this. They also made their own Megumi Text meme generator. You can find it [here](https://apollosense.github.io/megumi-meme-generator/)
