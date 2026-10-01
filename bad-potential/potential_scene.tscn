@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://q3hjnharm340"]
+
+[ext_resource type="Script" uid="uid://dferk2qkq0m6t" path="res://potential_script.gd" id="1_37egt"]
+[ext_resource type="Texture2D" uid="uid://bhvrdp6vn5npt" path="res://megumi-potential.png" id="1_kr7a2"]
+[ext_resource type="Shader" uid="uid://m24qo6o8k6bf" path="res://potential_shader.gdshader" id="2_03ki4"]
+[ext_resource type="FontFile" uid="uid://13m0dnb0gta3" path="res://TikTokSans-VariableFont_opsz,slnt,wdth,wght.ttf" id="3_37egt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i1pd6"]
+shader = ExtResource("2_03ki4")
+shader_parameter/glow_color = Color(0, 0.2, 1, 1)
+shader_parameter/glow_radius = 32.0
+shader_parameter/glow_intensity = 3.0000000447036
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_66j1p"]
+viewport_path = NodePath("TextureRect/SubViewport")
+
+[node name="potential_node" type="Node2D" unique_id=585317530]
+script = ExtResource("1_37egt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1409856410]
+position = Vector2(512, 371)
+texture = ExtResource("1_kr7a2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=547467839]
+material = SubResource("ShaderMaterial_i1pd6")
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 1039.0
+offset_bottom = 742.0
+texture = SubResource("ViewportTexture_66j1p")
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect" unique_id=149622505]
+transparent_bg = true
+size = Vector2i(1024, 741)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/SubViewport" unique_id=839656095]
+self_modulate = Color(0.62040275, 0.9606561, 1.353256, 1)
+offset_right = 1024.0
+offset_bottom = 741.0
+theme_override_fonts/normal_font = ExtResource("3_37egt")
+theme_override_font_sizes/normal_font_size = 30
+text = "PRESS \"SPACE\" OR \"ENTER\" TO POTENTIALLY BEGIN
+
+ONLY WORKS ONCE BECAUSE I AM POTENTIALLY LAZY
+
+ONCE STARTED, IT WILL POTENTIALLY LOOP
+
+UNFORTUNATELY NO SOUND BECAUSE OF THE
+DIGITAL MILLENIUM COPYRIGHT ACT"
